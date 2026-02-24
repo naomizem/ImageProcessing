@@ -33,6 +33,42 @@ if __name__ == "__main__":
         print(f"{deg},{rad:.6f},{s:.6f},{c:.6f}")
 
 
+
+
+    # ==========================================================
+    # שאלה 2 – מטריצות סיבוב ו-Scaling (תיאורטי)
+    # ==========================================================
+
+    print("\n======================================")
+    print("שאלה 2 – מטריצות בסיסיות")
+    print("======================================")
+
+    # א. מטריצת סיבוב כללית (לדוגמה: 30 מעלות)
+    theta = degrees_to_radians(30)
+
+    rotation_matrix = np.array([
+        [np.cos(theta), -np.sin(theta)],
+        [np.sin(theta),  np.cos(theta)]
+    ])
+
+    print("\nRotation matrix (30°):\n", rotation_matrix)
+
+    # ב. Scaling פי 2 בכל הכיוונים
+    scale_uniform = np.array([
+        [2, 0],
+        [0, 2]
+    ])
+
+    print("\nScaling x2 (uniform):\n", scale_uniform)
+
+    # ג. Scaling פי 2 בציר X בלבד
+    scale_x = np.array([
+        [2, 0],
+        [0, 1]
+    ])
+
+    print("\nScaling x2 in X direction:\n", scale_x)
+
     # ==========================================================
     # שאלה 3 – מטריצות סיבוב ו-Scaling
     # ==========================================================
